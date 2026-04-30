@@ -242,7 +242,7 @@ section {
     transition: transform 0.3s;
 }
 
-.media-card video {
+.media-card video, .audio-cover {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
