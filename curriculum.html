@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Curriculum - Bradford Communications LLC</title>
+    <title>Synthetic Intelligence Integration - Bradford Communications LLC</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
     <style>
-        /* Specific Curriculum Layout Styles */
         body {
-            font-family: Arial, Helvetica, sans-serif !important; /* Enforce Arial */
+            font-family: Arial, Helvetica, sans-serif !important;
         }
         
         .curriculum-layout {
             display: flex;
-            margin-top: 80px; /* Offset for fixed header */
+            margin-top: 80px;
             min-height: calc(100vh - 80px);
         }
 
         .curriculum-sidebar {
-            width: 300px;
+            width: 350px;
             background-color: var(--card-bg);
             border-right: 1px solid var(--border-color);
             position: fixed;
             height: calc(100vh - 80px);
             overflow-y: auto;
-            padding: 2rem;
+            padding: 2rem 1rem;
             z-index: 10;
         }
 
@@ -35,31 +34,35 @@
             text-transform: uppercase;
             font-size: 1.1rem;
             letter-spacing: 1px;
+            padding-left: 0.5rem;
         }
 
         .curriculum-sidebar ul {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.5rem;
+            padding-left: 0;
         }
 
         .curriculum-sidebar a {
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.95rem;
             display: block;
-            padding: 0.5rem;
+            padding: 0.75rem;
             border-radius: 4px;
             transition: background-color 0.2s;
+            text-decoration: none;
+            color: var(--text-color);
         }
 
         .curriculum-sidebar a:hover, .curriculum-sidebar a.active {
-            background-color: rgba(59, 130, 246, 0.1); /* Light primary */
+            background-color: rgba(59, 130, 246, 0.1);
             color: var(--primary-color);
         }
 
         .curriculum-content-area {
-            margin-left: 300px; /* Offset for sidebar */
+            margin-left: 350px;
             padding: 4rem 6rem;
             max-width: 1000px;
             width: 100%;
@@ -72,13 +75,14 @@
         }
 
         .module-section h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             color: var(--primary-color);
+            line-height: 1.2;
         }
 
         .module-section h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-top: 2.5rem;
             margin-bottom: 1rem;
         }
@@ -100,7 +104,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Responsive */
         @media (max-width: 900px) {
             .curriculum-layout {
                 flex-direction: column;
@@ -125,7 +128,7 @@
 <body>
     <header class="site-header">
         <div class="logo-container">
-            <a href="index.html" style="display:flex; align-items:center; gap:1rem;">
+            <a href="index.html" style="display:flex; align-items:center; gap:1rem; text-decoration:none;">
                 <img src="assets/logo.png" alt="Bradford Communications Logo" class="logo" id="site-logo">
                 <span class="logo-text">BRADFORD COMMUNICATIONS</span>
             </a>
@@ -134,9 +137,8 @@
             <a href="index.html#hero">Home</a>
             <a href="index.html#portfolio">Portfolio</a>
             <a href="curriculum.html" class="nav-btn-green">Learn How</a>
-            <!-- Settings Gear Icon for Theme Toggle -->
             <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light/Dark Mode">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="3"></circle>
                     <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                 </svg>
@@ -145,103 +147,142 @@
     </header>
 
     <div class="curriculum-layout">
-        <!-- Sidebar Navigation -->
         <aside class="curriculum-sidebar">
-            <h3>Course Modules</h3>
+            <h3>Synthetic Integration</h3>
             <ul id="curriculum-nav">
-                <li><a href="#module-1" class="active">1. The Foundations of AI</a></li>
-                <li><a href="#module-2">2. The Generative AI Revolution</a></li>
-                <li><a href="#module-3">3. Prompt Engineering</a></li>
-                <li><a href="#module-4">4. The Future is Agentic</a></li>
-                <li><a href="#module-5">5. AI Ethics & Human Element</a></li>
+                <li><a href="#mod-1" class="active">1. Neural Network Architecture</a></li>
+                <li><a href="#mod-2">2. OpenAI GPT, Gemini, DeepSeek, Grok</a></li>
+                <li><a href="#mod-3">3. Anthropic Claude, Google Antigravity</a></li>
+                <li><a href="#mod-4">4. Image Creation (Midjourney, GPT, Gemini)</a></li>
+                <li><a href="#mod-5">5. Suno for Music, Ableton</a></li>
+                <li><a href="#mod-6">6. ElevenLabs.io (TTS, STT, Voice Mod)</a></li>
+                <li><a href="#mod-7">7. Kling, Luma Dream Machine, Sora</a></li>
+                <li><a href="#mod-8">8. ClipChamp Editing</a></li>
+                <li><a href="#mod-9">9. Zencastr & DistroKid Publishing</a></li>
+                <li><a href="#mod-10">10. Building Your Own AI Models</a></li>
+                <li><a href="#mod-11">11. Ethics, Lawful, and NDA Damage</a></li>
+                <li><a href="#mod-12">12. Cybernetics & The Singularity</a></li>
+                <li><a href="#mod-13">13. Sociological Impacts & MTA</a></li>
             </ul>
         </aside>
 
-        <!-- Main Content Area -->
         <main class="curriculum-content-area">
             
-            <section id="module-1" class="module-section">
-                <h1>Module 1: The Foundations of AI</h1>
-                <p>Welcome to the absolute cutting edge of artificial intelligence. Before we can leverage the immense power of generative media, we must first understand what AI is, and more importantly, what it isn't.</p>
-                
-                <h2>Demystifying AI</h2>
-                <p>Artificial Intelligence (AI) is not magic, nor is it a conscious entity. At its core, AI is a branch of computer science dedicated to creating systems capable of performing tasks that typically require human intelligence. These tasks include recognizing patterns, understanding natural language, learning from experience, and making decisions.</p>
-                <p>For decades, AI was dominated by rigid, rule-based systems. You had to program every possible scenario. Today, we exist in the era of <strong>Machine Learning (ML)</strong>, where we feed systems massive amounts of data and allow them to infer the rules themselves.</p>
+            <section id="mod-1" class="module-section">
+                <h1>1. Neural Network Architecture</h1>
+                <p>To master synthetic intelligence, one must first understand its foundational anatomy. Artificial Neural Networks (ANNs) are computational models inspired by the human brain, designed to recognize complex patterns and infer relationships from vast amounts of data.</p>
+                <h2>The Anatomy of a Node</h2>
+                <p>At the core of an ANN is the "node" or "perceptron." Each node receives input data, assigns it a specific "weight" (importance), and adds a "bias" (a threshold). This data is passed through an Activation Function (like ReLU or Sigmoid), which decides whether the node should "fire" and pass the signal to the next layer.</p>
+                <h2>Deep Learning & Transformers</h2>
+                <p>When networks stack multiple hidden layers, they become "Deep Learning" models. In 2017, Google introduced the <strong>Transformer architecture</strong>, which relies on "Self-Attention" mechanisms. This allows the network to process entire sequences of data simultaneously rather than chronologically, giving the model an unprecedented understanding of context. This architecture is the engine behind every modern LLM.</p>
+            </section>
 
-                <h2>Machine Learning vs. Deep Learning vs. Generative AI</h2>
+            <section id="mod-2" class="module-section">
+                <h1>2. OpenAI GPT, Gemini, DeepSeek, Grok</h1>
+                <p>The landscape of Large Language Models (LLMs) is dominated by a few titanic foundational models, each with distinct flavors, training paradigms, and capabilities.</p>
                 <ul>
-                    <li><strong>Machine Learning (ML):</strong> The broad concept of algorithms learning from data to make predictions. Example: Netflix recommending a movie based on your watch history.</li>
-                    <li><strong>Deep Learning (DL):</strong> A subset of ML that uses artificial neural networks with multiple layers (hence "deep"). This technology powers image recognition and voice assistants.</li>
-                    <li><strong>Generative AI:</strong> The bleeding edge. Rather than just predicting or classifying data, Generative AI creates entirely <em>new</em> data—text, images, video, and audio—that didn't previously exist.</li>
+                    <li><strong>OpenAI GPT (Generative Pre-trained Transformer):</strong> The pioneer of the modern LLM era. GPT-4 remains the industry standard for complex reasoning, multi-modal understanding, and nuanced creative writing.</li>
+                    <li><strong>Google Gemini:</strong> Built from the ground up as a native multi-modal model. Unlike others that bolt image recognition onto text models, Gemini processes text, code, audio, and video interchangeably from its core.</li>
+                    <li><strong>DeepSeek:</strong> An open-weight powerhouse emerging from China, prioritizing extreme efficiency, math, and coding benchmarks, often outperforming much larger models at a fraction of the compute cost.</li>
+                    <li><strong>xAI Grok:</strong> Integrated directly into the X (Twitter) ecosystem, Grok's primary differentiator is its access to real-time, unfiltered global data streams and a deliberately rebellious, anti-woke personality framework.</li>
                 </ul>
-
-                <h2>The Rapid Acceleration of Neural Networks</h2>
-                <p>The human brain contains billions of interconnected neurons. Artificial Neural Networks attempt to mimic this biological architecture using mathematical nodes. The recent explosion in AI capabilities isn't due to a sudden discovery of a magic algorithm; it is the convergence of massive datasets (the entire internet), exponentially faster compute power (GPUs), and architectural breakthroughs like the Transformer model (which we will cover in Module 2).</p>
             </section>
 
-            <section id="module-2" class="module-section">
-                <h1>Module 2: The Generative AI Revolution</h1>
-                <p>We are currently living through the most significant technological paradigm shift since the invention of the internet. Generative AI is reshaping media, communication, and creative production.</p>
-
-                <h2>Large Language Models (LLMs)</h2>
-                <p>LLMs, such as OpenAI's GPT-4, Google's Gemini, and Anthropic's Claude, are the engines driving the modern AI boom. They are built on an architecture called the <strong>Transformer</strong>, introduced by Google in 2017.</p>
-                <p>How do they work? In simple terms, they are incredibly advanced autocomplete engines. They do not "think"; they calculate the statistical probability of the next word in a sequence based on the context of all the words that came before it. However, because they have been trained on essentially the entirety of human public knowledge, this statistical prediction manifests as reasoning, logic, and creativity.</p>
-
-                <h2>Diffusion Models (Visual AI)</h2>
-                <p>If LLMs conquered text, Diffusion Models conquered pixels. Platforms like Midjourney, DALL-E 3, and Stable Diffusion generate hyper-realistic images from text prompts.</p>
-                <p>A diffusion model learns by taking a clean image, systematically adding "noise" (static) to it until it's unrecognizable, and then training a neural network to reverse the process—to denoise the static back into a coherent image. When you give it a prompt, you are essentially asking the model to start with pure static and "hallucinate" a specific image out of the noise based on its training.</p>
-
-                <h2>Audio & Music AI</h2>
-                <p>For media companies like Bradford Communications, Audio AI is a superpower. Platforms like Suno and Udio have cracked the code on generating full-fidelity music—complete with vocals, instrumentation, and cohesive structure—from simple text prompts.</p>
-                <p>These models understand musical genres, lyrical rhythm, and emotional cadence. They allow producers and directors to rapidly prototype soundtracks, generate backing tracks for music videos, and explore sonic landscapes that would traditionally take days and thousands of dollars to produce in a studio.</p>
+            <section id="mod-3" class="module-section">
+                <h1>3. Anthropic Claude, Google Antigravity (Vibe Coding)</h1>
+                <p>Moving beyond simple chat interfaces, we enter the realm of specialized, agentic assistants and "Vibe Coding."</p>
+                <h2>Anthropic Claude</h2>
+                <p>Claude (specifically the Opus and Sonnet models) is renowned for its "Constitutional AI" training, which drastically reduces hallucinations and provides an extremely large context window (capable of reading entire books in seconds). It is widely considered the superior model for coding, long-form editing, and complex data analysis.</p>
+                <h2>Google Antigravity & Vibe Coding</h2>
+                <p><strong>Vibe Coding</strong> represents the future of software development. Instead of writing syntax line-by-line, a user communicates their "vibe" or intention to an agentic system like Google Antigravity. Antigravity acts as a senior developer, autonomously traversing file systems, executing terminal commands, creating web apps, and self-correcting bugs on the fly based purely on natural language direction.</p>
             </section>
 
-            <section id="module-3" class="module-section">
-                <h1>Module 3: Prompt Engineering</h1>
-                <p>The AI model is the engine, but the prompt is the steering wheel. Prompt Engineering is the art and science of communicating with AI to extract the highest quality output.</p>
+            <section id="mod-4" class="module-section">
+                <h1>4. Image Creation (Midjourney, GPT, Gemini)</h1>
+                <p>The shift from capturing photons to generating pixels.</p>
+                <h2>Midjourney</h2>
+                <p>Midjourney V6 operates via Discord and remains the undisputed king of cinematic, highly-stylized, and photorealistic imagery. It requires specialized prompting techniques—using parameters like `--ar 16:9` for aspect ratios, `--stylize`, and `--chaos`—to control the diffusion process and yield gallery-quality art.</p>
+                <h2>GPT (DALL-E 3) & Gemini</h2>
+                <p>DALL-E 3 (integrated into ChatGPT) excels at <strong>prompt adherence</strong>. It perfectly understands complex spatial relationships and text rendering within images, though it tends to lean toward a more polished, "stock photo" aesthetic compared to Midjourney. Gemini uses Google's Imagen model, offering blazingly fast generation and deep integration into the Google Workspace ecosystem.</p>
+            </section>
 
-                <h2>The Anatomy of a Perfect Prompt</h2>
-                <p>A professional prompt rarely consists of a single sentence. It should be structured to provide maximum context. A highly effective framework is <strong>CREATE</strong>:</p>
+            <section id="mod-5" class="module-section">
+                <h1>5. Suno for Music, Ableton</h1>
+                <p>Synthetic audio generation has cracked the code on emotional resonance and musical structure.</p>
+                <h2>Suno</h2>
+                <p>Suno is the premier AI music generator. By providing lyrics (or letting the AI write them) and defining genres (e.g., "Dark Cyberpunk Synthwave, Female Vocals, 120 BPM"), Suno synthesizes full vocals, instrumentation, and mastering in seconds. It understands song structure—verses, choruses, bridges, and drops.</p>
+                <h2>Integration with Ableton</h2>
+                <p>The professional workflow does not stop at Suno. Producers use AI separation tools to isolate the stems (vocals, drums, bass) generated by Suno. These stems are then imported into a Digital Audio Workstation (DAW) like <strong>Ableton Live</strong>, where human producers apply EQ, compression, custom MIDI overlays, and structural edits, perfectly blending synthetic generation with human musicality.</p>
+            </section>
+
+            <section id="mod-6" class="module-section">
+                <h1>6. ElevenLabs.io | Text to Speech, Speech to Text, Speech Modification</h1>
+                <p>Voice is the ultimate vector for human connection, and ElevenLabs currently possesses the most advanced synthetic voice engine on Earth.</p>
                 <ul>
-                    <li><strong>Context:</strong> Who are you and what is the situation? (e.g., "Act as an expert music producer...")</li>
-                    <li><strong>Request:</strong> What exactly do you want the AI to do?</li>
-                    <li><strong>Examples:</strong> Provide examples of the desired output style.</li>
-                    <li><strong>Adjustments:</strong> Constraints or rules (e.g., "Do not use corporate jargon. Keep it under 200 words.")</li>
-                    <li><strong>Tone:</strong> How should it sound? (e.g., "Cinematic, dramatic, and punchy.")</li>
+                    <li><strong>Text-to-Speech (TTS):</strong> Generating hyper-realistic human speech with nuanced emotion, breath patterns, and pacing.</li>
+                    <li><strong>Voice Cloning:</strong> Providing a 1-minute audio sample to create a digital clone of anyone's voice. This is heavily utilized for Automated Dialogue Replacement (ADR) in film, podcast localization, and audiobook narration.</li>
+                    <li><strong>Speech-to-Speech (Voice Modification):</strong> Speaking into a microphone to provide the acting, emotion, and cadence, and having the AI map the sound of a completely different voice (e.g., an elderly man or a fantasy creature) over your performance in real-time.</li>
                 </ul>
-
-                <h2>Advanced Techniques</h2>
-                <p><strong>Zero-Shot Prompting:</strong> Asking the AI to perform a task without giving it any examples. This relies entirely on its pre-trained knowledge.</p>
-                <p><strong>Few-Shot Prompting:</strong> Providing the AI with 2-3 examples of the input-output relationship before giving it your actual request. This drastically increases accuracy and stylistic consistency.</p>
-                <p><strong>Chain-of-Thought (CoT):</strong> Asking the AI to "think step-by-step" before providing the final answer. This forces the model to break down complex logic, significantly reducing errors in reasoning tasks.</p>
             </section>
 
-            <section id="module-4" class="module-section">
-                <h1>Module 4: The Future is Agentic</h1>
-                <p>We are currently transitioning from AI as a "chatbot" to AI as an "agent." This is where the true revolution in productivity lies.</p>
-
-                <h2>What are Agentic Workflows?</h2>
-                <p>A chatbot waits for your prompt, replies, and stops. An <strong>AI Agent</strong> is given a high-level goal (e.g., "Research the top 5 competitors in my industry and build a presentation summarizing their weaknesses") and operates autonomously to achieve it.</p>
-                <p>Agents have access to <strong>Tools</strong>. They can browse the live internet, write and execute Python code, read your files, and even control your computer's browser. When an agent hits a roadblock, it uses logic to correct its course, try a new tool, and continue until the task is complete.</p>
-
-                <h2>RAG (Retrieval-Augmented Generation)</h2>
-                <p>One of the biggest limitations of base LLMs is that they don't know your specific, private data. RAG solves this.</p>
-                <p>Instead of relying on the AI's memory, a RAG system takes your specific documents (like this curriculum, or Bradford Communications' internal memos), converts them into mathematical vectors, and stores them in a database. When you ask the AI a question, the system searches your database first, retrieves the exact relevant paragraphs, and feeds them to the AI to construct a perfectly accurate, customized answer without hallucinating.</p>
+            <section id="mod-7" class="module-section">
+                <h1>7. Kling, Luma Dream Machine, Sora</h1>
+                <p>The bleeding edge of synthetic media: Video Generation. These platforms understand the physics of the real world—gravity, lighting, and object permanence—to generate motion pictures.</p>
+                <ul>
+                    <li><strong>OpenAI Sora:</strong> Capable of generating up to 60 seconds of flawlessly consistent, high-definition video from text prompts, maintaining extreme character consistency and complex camera movements.</li>
+                    <li><strong>Luma Dream Machine:</strong> Extremely fast, highly accessible video generation specializing in keyframing (animating from a provided starting image to an ending image).</li>
+                    <li><strong>Kling:</strong> A formidable Chinese model offering extended generation times, hyper-realistic physics simulations (like people eating), and intricate control over camera panning and zooming.</li>
+                </ul>
             </section>
 
-            <section id="module-5" class="module-section">
-                <h1>Module 5: AI Ethics & The Human Element</h1>
-                <p>As AI becomes increasingly capable of generating art, music, text, and code, it raises profound ethical and philosophical questions.</p>
+            <section id="mod-8" class="module-section">
+                <h1>8. ClipChamp Editing</h1>
+                <p>The assembly layer. Generating assets is only the first step; editing weaves them into a narrative.</p>
+                <p><strong>Microsoft ClipChamp</strong> is a streamlined, web-based video editor that integrates directly with Windows. It allows creators to rapidly pull in Midjourney images, Suno audio tracks, and ElevenLabs voiceovers onto a timeline. ClipChamp features native AI tools, such as auto-captions, automatic silence removal, and smart reframing, bridging the gap between professional editing suites like Premiere Pro and accessible content creation.</p>
+            </section>
 
-                <h2>Copyright and Ownership</h2>
-                <p>The legal landscape surrounding generative AI is currently the Wild West. Models are trained on publicly available data, which often includes copyrighted material. Furthermore, the US Copyright Office has generally ruled that purely AI-generated works cannot be copyrighted because they lack "human authorship." Media professionals must navigate this by ensuring human curation, direction, and modification are heavily involved in the final product.</p>
+            <section id="mod-9" class="module-section">
+                <h1>9. Zencastr and DistroKid Publishing</h1>
+                <p>Once the media is generated and edited, it must be distributed.</p>
+                <h2>Zencastr</h2>
+                <p>The standard for high-fidelity remote recording and podcast publishing. Zencastr records local 4K video and lossless audio tracks for each participant, overcoming internet latency issues. Its AI suites provide automatic mixing, mastering, and distribution to Apple Podcasts and Spotify.</p>
+                <h2>DistroKid</h2>
+                <p>For music distribution (including AI-generated tracks manipulated in Ableton), DistroKid pushes audio to Spotify, Apple Music, TikTok, and Instagram Reels. They handle royalty splits, ISRC codes, and mechanical licenses, allowing independent creators to act as their own record labels.</p>
+            </section>
 
-                <h2>Bias and Hallucinations</h2>
-                <p>AI models reflect the data they were trained on—which means they can perpetuate human biases, stereotypes, and prejudices. Furthermore, because LLMs are statistical prediction engines, they can confidently generate false information, known as <strong>hallucinations</strong>. Relying on AI without human verification is a massive risk.</p>
+            <section id="mod-10" class="module-section">
+                <h1>10. Building Your Own AI Models</h1>
+                <p>Relying solely on proprietary APIs (like OpenAI) creates vendor lock-in. The open-source movement allows individuals and companies to build, host, and fine-tune their own models.</p>
+                <h2>Llama, Claude, Mistral & Mixtral</h2>
+                <p>Meta's <strong>Llama</strong> and Europe's <strong>Mistral</strong> provide open-weight models that rival GPT-4. Students learn how to take these base models and "fine-tune" them on their own private datasets. We explore <strong>Mixtral's Mixture of Experts (MoE)</strong> architecture, where multiple small specialized neural networks work together, only activating the "expert" needed for a specific prompt, drastically reducing compute costs while maximizing intelligence.</p>
+            </section>
 
-                <h2>The Human Element</h2>
-                <p>Will AI replace creators? No. But creators who use AI will replace those who do not.</p>
-                <p>In a world where execution (generating an image, writing a script, producing a beat) takes seconds and costs pennies, the value of mechanical execution drops to zero. <strong>Taste, vision, and curation</strong> become the ultimate premium skills. The human element is no longer about holding the brush; it is about choosing what to paint, why it matters, and how it connects to the human experience.</p>
+            <section id="mod-11" class="module-section">
+                <h1>11. Ethics, Lawful, and NDA Damage</h1>
+                <p>The power of synthetic media introduces unprecedented legal and ethical hazards.</p>
+                <ul>
+                    <li><strong>Data Privacy & NDAs:</strong> Feeding proprietary client data into public models like ChatGPT effectively leaks that data to the model provider, constituting severe NDA breaches. Companies must use enterprise, zero-retention APIs or host local models.</li>
+                    <li><strong>Copyright Infringement:</strong> The legal battle over models trained on copyrighted materials. Can an artist copyright a Midjourney image? Current US law dictates that only human-authored works are copyrightable; heavy human modification in Ableton or ClipChamp is required to claim ownership.</li>
+                    <li><strong>Deepfakes & Fraud:</strong> The ethical responsibility of watermarking and disclosing synthetic media to combat misinformation and reputational damage.</li>
+                </ul>
+            </section>
+
+            <section id="mod-12" class="module-section">
+                <h1>12. Cybernetics & The Singularity</h1>
+                <p>As synthetic intelligence advances, it inevitably intersects with human biology.</p>
+                <h2>Moore's Law & Ray Kurzweil</h2>
+                <p>Gordon Moore predicted the exponential doubling of computing power. Futurist <strong>Ray Kurzweil</strong> expands this into the "Law of Accelerating Returns," predicting that technological evolution will become so rapid it will lead to the <strong>Singularity</strong>—a point where AI surpasses human comprehension, merging with human intelligence.</p>
+                <h2>Cybernetics and Biohacking</h2>
+                <p>We are already augmenting the human condition. From Neuralink's brain-computer interfaces (BCIs) to DIY biohackers implanting RFID chips, the line between human consciousness and synthetic intelligence is blurring. This module explores the trajectory toward post-biological humanity.</p>
+            </section>
+
+            <section id="mod-13" class="module-section">
+                <h1>13. Sociological Impacts & MTA</h1>
+                <p>How does the integration of synthetic intelligence reshape society, philosophy, and religion?</p>
+                <h2>Analytical & Philosophical Impacts</h2>
+                <p>If a machine can generate art, music, and poetry that brings a human to tears, what does it mean to have a "soul"? We analyze the sociological impact of post-labor economics (UBI), the crisis of meaning in a world where machines out-perform humans, and the concept of AI as an evolutionary successor.</p>
+                <h2>The Mormon Transhumanist Association (MTA)</h2>
+                <p>We examine unique ideological intersections, such as the MTA. The MTA synthesizes Mormon theology with transhumanism, proposing that scientific advancement (including AI, radical life extension, and simulated realities) is not contrary to religion, but is in fact the mechanism by which humans fulfill the theological mandate to become divine and participate in the continuous creation of the universe.</p>
             </section>
 
         </main>
@@ -249,7 +290,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Simple script to handle active states on the sidebar as you scroll
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.module-section');
             const navLinks = document.querySelectorAll('#curriculum-nav a');
@@ -258,8 +298,6 @@
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    // If we have scrolled past the top of the section (with some offset)
                     if (pageYOffset >= (sectionTop - 150)) {
                         current = section.getAttribute('id');
                     }
