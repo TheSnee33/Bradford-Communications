@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bradford Communications LLC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
 <body>
     <header class="site-header">
@@ -33,6 +34,9 @@
     <main>
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
+            <video id="bg-video-1" class="hero-bg-video" autoplay loop muted playsinline></video>
+            <video id="bg-video-2" class="hero-bg-video hero-bg-hidden" autoplay loop muted playsinline></video>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="hero-title">Elevating Media & Sound</h1>
                 <p class="hero-subtitle">Bradford Communications LLC</p>
@@ -49,18 +53,22 @@
                     <!-- Music Videos -->
                     <div class="portfolio-category">
                         <h3 class="category-title">Music Videos</h3>
-                        <div class="video-grid">
+                        <div class="video-grid quadrant-grid">
                             <div class="media-card">
-                                <div class="media-placeholder video-placeholder">
-                                    <span>Video 1 Placeholder</span>
-                                </div>
-                                <h4>Latest Release</h4>
+                                <video src="AI Videos/072 - Morning Mix.mp4" controls preload="metadata"></video>
+                                <h4>Morning Mix</h4>
                             </div>
                             <div class="media-card">
-                                <div class="media-placeholder video-placeholder">
-                                    <span>Video 2 Placeholder</span>
-                                </div>
-                                <h4>Live Performance</h4>
+                                <video src="AI Videos/074 No AI Cheating (Remix).mp4" controls preload="metadata"></video>
+                                <h4>No AI Cheating (Remix)</h4>
+                            </div>
+                            <div class="media-card">
+                                <video src="AI Videos/075 02 Lead With Your Heart - Taani.mp4" controls preload="metadata"></video>
+                                <h4>Lead With Your Heart</h4>
+                            </div>
+                            <div class="media-card">
+                                <video src="AI Videos/33 I Am The Storm - Track 077.mp4" controls preload="metadata"></video>
+                                <h4>I Am The Storm</h4>
                             </div>
                         </div>
                     </div>
@@ -68,22 +76,40 @@
                     <!-- Music / Audio -->
                     <div class="portfolio-category">
                         <h3 class="category-title">Music</h3>
-                        <div class="audio-list">
+                        <div class="audio-list quadrant-grid">
                             <div class="audio-track">
                                 <div class="track-info">
-                                    <span class="track-name">Track Title 1</span>
+                                    <span class="track-name">Lead With Your Heart</span>
                                 </div>
                                 <audio controls>
-                                    <!-- <source src="assets/audio1.mp3" type="audio/mpeg"> -->
+                                    <source src="AI Music/075_Lead With Your Heart 00.wav" type="audio/wav">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
                             <div class="audio-track">
                                 <div class="track-info">
-                                    <span class="track-name">Track Title 2</span>
+                                    <span class="track-name">I Am The Storm</span>
                                 </div>
                                 <audio controls>
-                                    <!-- <source src="assets/audio2.mp3" type="audio/mpeg"> -->
+                                    <source src="AI Music/077 I Am The Storm.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <div class="audio-track">
+                                <div class="track-info">
+                                    <span class="track-name">I Live Because of You (Mastered)</span>
+                                </div>
+                                <audio controls>
+                                    <source src="AI Music/I Live Because of You - Distrokid Mastered.wav" type="audio/wav">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <div class="audio-track">
+                                <div class="track-info">
+                                    <span class="track-name">I Live Because of You (MP3)</span>
+                                </div>
+                                <audio controls>
+                                    <source src="AI Music/I Live Because of You.mp3" type="audio/mpeg">
                                     Your browser does not support the audio element.
                                 </audio>
                             </div>
