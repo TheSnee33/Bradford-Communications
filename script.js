@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Background Video Rotation Logic
     const bgVideos = [
         "AI Videos/High Voltage Vision.mp4",
-        "AI Videos/The Rain and the Rise_01_Full.mp4"
+        "AI Videos/The Rain and the Rise_01_Full.mp4",
+        "AI Videos/33 I Am The Storm - Track 077.mp4"
     ];
     let currentVideoIndex = 0;
     
