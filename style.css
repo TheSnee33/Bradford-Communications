@@ -314,6 +314,9 @@ audio {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     transition: box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .module-card:hover {
