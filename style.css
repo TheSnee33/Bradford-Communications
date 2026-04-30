@@ -88,6 +88,20 @@ a:hover {
     letter-spacing: 0.5px;
 }
 
+.main-nav a.nav-btn-green {
+    background-color: #a7f3d0; /* Light green */
+    color: #065f46; /* Dark green for contrast */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.main-nav a.nav-btn-green:hover {
+    background-color: #6ee7b7;
+    color: #064e3b;
+    transform: translateY(-2px);
+}
+
 .theme-toggle-btn {
     background: none;
     border: none;
